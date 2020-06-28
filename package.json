@@ -1,0 +1,21 @@
+{
+  "name": "tailwind-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development $npm_execpath run build:dev && live-server public --host=0.0.0.0",
+    "build:dev": "postcss src/tailwind.css -o public/build/tailwind.css",
+    "build": "NODE_ENV=production postcss src/tailwind.css -o public/build/tailwind.css"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.4",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
